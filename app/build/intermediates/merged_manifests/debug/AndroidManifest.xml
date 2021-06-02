@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.guruprem.project2_cst338"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk
+        android:minSdkVersion="26"
+        android:targetSdkVersion="30" />
+
+    <!-- Although the *SdkVersion is captured in gradle build files, this is required for non gradle builds -->
+    <!-- <uses-sdk android:minSdkVersion="14" /> -->
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <application
+        android:allowBackup="true"
+        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
+        android:debuggable="true"
+        android:extractNativeLibs="false"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:testOnly="true"
+        android:theme="@style/AppTheme" >
+        <activity android:name="com.guruprem.project2_cst338.ForgotPassword" />
+        <activity android:name="com.guruprem.project2_cst338.ViewAddress" />
+        <activity android:name="com.guruprem.project2_cst338.Rough_Cart1" />
+        <activity android:name="com.guruprem.project2_cst338.Product_with_cart" />
+        <activity android:name="com.guruprem.project2_cst338.Cart2user" />
+        <activity android:name="com.guruprem.project2_cst338.Cart1user" />
+        <activity android:name="com.guruprem.project2_cst338.Product2itemuser" />
+        <activity android:name="com.guruprem.project2_cst338.Product1itemuser" />
+        <activity android:name="com.guruprem.project2_cst338.Product2User" />
+        <activity android:name="com.guruprem.project2_cst338.Product1User" />
+        <activity android:name="com.guruprem.project2_cst338.ProductDetailUser" />
+        <activity android:name="com.guruprem.project2_cst338.Product2Details" />
+        <activity android:name="com.guruprem.project2_cst338.ProductDetail" />
+        <activity android:name="com.guruprem.project2_cst338.Admin_Item" />
+        <activity android:name="com.guruprem.project2_cst338.DeliveryActivity" />
+        <activity android:name="com.guruprem.project2_cst338.AddAddressActivity" />
+        <activity android:name="com.guruprem.project2_cst338.MyAddressesActivity" />
+        <activity android:name="com.guruprem.project2_cst338.UpdateInfoUser" />
+        <activity android:name="com.guruprem.project2_cst338.ChooseLogin" />
+        <activity android:name="com.guruprem.project2_cst338.CreateActivity" />
+        <activity android:name="com.guruprem.project2_cst338.AddUserActivity" />
+        <activity android:name="com.guruprem.project2_cst338.LoginActivity" />
+        <activity android:name="com.guruprem.project2_cst338.User_Screen" />
+        <activity android:name="com.guruprem.project2_cst338.Change_Password" />
+        <activity android:name="com.guruprem.project2_cst338.RoughWork_Admin" />
+        <activity android:name="com.guruprem.project2_cst338.Roughwork_User" />
+        <activity
+            android:name="com.guruprem.project2_cst338.SplashScreen"
+            android:screenOrientation="portrait"
+            android:theme="@style/SplashTheme" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <service
+            android:name="androidx.room.MultiInstanceInvalidationService"
+            android:directBootAware="true"
+            android:exported="false" />
+        <service
+            android:name="com.google.firebase.components.ComponentDiscoveryService"
+            android:directBootAware="true"
+            android:exported="false" >
+            <meta-data
+                android:name="com.google.firebase.components:com.google.firebase.firestore.FirestoreRegistrar"
+                android:value="com.google.firebase.components.ComponentRegistrar" />
+            <meta-data
+                android:name="com.google.firebase.components:com.google.firebase.auth.FirebaseAuthRegistrar"
+                android:value="com.google.firebase.components.ComponentRegistrar" />
+        </service>
+
+        <activity
+            android:name="com.google.firebase.auth.internal.GenericIdpActivity"
+            android:excludeFromRecents="true"
+            android:exported="true"
+            android:launchMode="singleTask"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" >
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data
+                    android:host="firebase.auth"
+                    android:path="/"
+                    android:scheme="genericidp" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.google.firebase.auth.internal.RecaptchaActivity"
+            android:excludeFromRecents="true"
+            android:exported="true"
+            android:launchMode="singleTask"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" >
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data
+                    android:host="firebase.auth"
+                    android:path="/"
+                    android:scheme="recaptcha" />
+            </intent-filter>
+        </activity>
+
+        <service
+            android:name="com.google.firebase.auth.api.fallback.service.FirebaseAuthFallbackService"
+            android:enabled="true"
+            android:exported="false" >
+            <intent-filter>
+                <action android:name="com.google.firebase.auth.api.gms.service.START" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </service>
+
+        <activity
+            android:name="com.google.android.gms.common.api.GoogleApiActivity"
+            android:exported="false"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+
+        <provider
+            android:name="com.google.firebase.provider.FirebaseInitProvider"
+            android:authorities="com.guruprem.project2_cst338.firebaseinitprovider"
+            android:directBootAware="true"
+            android:exported="false"
+            android:initOrder="100" />
+
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
+    </application>
+
+</manifest>
