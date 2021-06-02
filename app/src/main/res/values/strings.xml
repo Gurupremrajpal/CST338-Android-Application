@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">project338</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="iphone_8">iphone 8</string>
+    <string name="iphone_x">iphone X</string>
+    <string name="all_products">All products</string>
+    <string name="realme_5_pro">Realme 5 pro</string>
+    <string name="this_is_a_phone">This is a phone</string>
+    <string name="reset_password">Reset Password</string>
+</resources>
