@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.guruprem.project2_cst338">
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name=".ForgotPassword"></activity>
+        <activity android:name=".ViewAddress" />
+        <activity android:name=".Rough_Cart1" />
+        <activity android:name=".Product_with_cart" />
+        <activity android:name=".Cart2user" />
+        <activity android:name=".Cart1user" />
+        <activity android:name=".Product2itemuser" />
+        <activity android:name=".Product1itemuser" />
+        <activity android:name=".Product2User" />
+        <activity android:name=".Product1User" />
+        <activity android:name=".ProductDetailUser" />
+        <activity android:name=".Product2Details" />
+        <activity android:name=".ProductDetail" />
+        <activity android:name=".Admin_Item" />
+        <activity android:name=".DeliveryActivity" />
+        <activity android:name=".AddAddressActivity" />
+        <activity android:name=".MyAddressesActivity" />
+        <activity android:name=".UpdateInfoUser" />
+        <activity android:name=".ChooseLogin" />
+        <activity android:name=".CreateActivity" />
+        <activity android:name=".AddUserActivity" />
+        <activity android:name=".LoginActivity" />
+        <activity android:name=".User_Screen" />
+        <activity android:name=".Change_Password" />
+        <activity android:name=".RoughWork_Admin" />
+        <activity android:name=".Roughwork_User" />
+        <activity
+            android:name=".SplashScreen"
+            android:screenOrientation="portrait"
+            android:theme="@style/SplashTheme">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>
